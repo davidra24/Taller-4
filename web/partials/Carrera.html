@@ -15,13 +15,11 @@
                     facultad
                 </th>
                 <th>
-                    &nbsp;
+                    &nbsp;       &nbsp;
                 </th>
             </tr>
             <tr ng-repeat="row in lista">
                 <td class="row">{{row.nombre}}</td>
-
-
                 <td class="row">{{row.facultad.nombre}}</td>              
                 <td class="row">
                     <button type="button" class="btn btn-default" ng-click="editar(row)">

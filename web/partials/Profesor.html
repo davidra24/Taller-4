@@ -9,16 +9,13 @@
         <table class="resultados table table-striped">
             <tr>
                 <th>
-                    nombre
+                    Nombre
                 </th>
                 <th>
-                    apellido
+                    Apellido
                 </th>
                 <th>
                     Documento
-                </th>
-                <th>
-                    Materia
                 </th>
                 <th>
                     &nbsp;
@@ -28,7 +25,6 @@
                 <td class="row">{{row.nombre}}</td>
                 <td class="row">{{row.apellidos}}</td>  
                 <td class="row">{{row.documento}}</td>
-                <td class="row">{{row.materia.nombre}}</td>  
                 <td class="row">
                     <button type="button" class="btn btn-default" ng-click="editar(row)">
                         <span class="glyphicon glyphicon-pencil"></span>Editar
@@ -49,7 +45,7 @@
         <form role="form" id="formularioEditar">
             <div class="row">
                 <div class="form-group col-md-6" ng-class="errores.nombre ? 'error' : ''">
-                    <label for="nombre">nombre</label>
+                    <label for="nombre">Nombre</label>
                     <input id="nombre" 
                            class="form-control" 
                            type="text"
@@ -61,7 +57,7 @@
             <div class="row">
                 <div class="form-group col-md-6" ng-class="errores.idAseg ? 'error' : ''">
                     <label>Apellido</label>
-                    <input id="nombre" 
+                    <input id="Apellido"
                            class="form-control" 
                            type="text"
                            ng-model="datosFormulario.apellidos"
@@ -70,24 +66,14 @@
                 </div>
             </div>
             <div class="row">
-                <div class="form-group col-md-6" ng-class="errores.idAseg ? 'error' : ''">
+                <div class="form-group col-md-3" ng-class="errores.idAseg ? 'error' : ''">
                     <label>Documento</label>
-                    <input id="nombre" 
+                    <input id="Documento"
                            class="form-control" 
-                           type="text"
+                           type="number"
                            ng-model="datosFormulario.documento"
                            placeholder="nombre"/>
                     <div ng-show="errores.apellidos">{{errores.apellidos}}</div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="form-group col-md-6" ng-class="errores.idAseg ? 'error' : ''">
-                    <label>materia</label>
-                    <select id="facultad" class="form-control" 
-                            ng-model="datosFormulario.materia"
-                            ng-options="option.nombre for option in listaMaterias track by option.id">
-                    </select>
-                    <div ng-show="errores.facultad">{{errores.facultad}}</div>
                 </div>
             </div>
             <div class="btn-group">

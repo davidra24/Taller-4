@@ -5,7 +5,6 @@ module.controller('ProfesorCtrl', ['$scope', '$filter', '$http', function ($scop
         $scope.lista = profesores;
         $scope.datosFormulario = {};
         $scope.panelEditar = false;
-        $scope.listaMaterias = materias;
 
         //guardar
         $scope.nuevo = function () {
@@ -16,7 +15,7 @@ module.controller('ProfesorCtrl', ['$scope', '$filter', '$http', function ($scop
         $scope.guardar = function () {
             var index = $scope.lista.indexOf($scope.datosFormulario);
             if (index === -1) {
-                $scope.datosFormulario.id=idCarrera++;
+                $scope.datosFormulario.id=idProfesores++;
                 $scope.lista.push($scope.datosFormulario);
             }
             $scope.panelEditar = false;

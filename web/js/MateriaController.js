@@ -5,6 +5,9 @@ module.controller('MateriaCtrl', ['$scope', '$filter', '$http', function ($scope
         $scope.lista = materias;
         $scope.datosFormulario = {};
         $scope.panelEditar = false;
+        $scope.listaCarrera = carreras;
+        $scope.listaProfesor = profesores;
+    $scope.listaHorario = horarios;
 
         //guardar
         $scope.nuevo = function () {
